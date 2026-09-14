@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora Python</title>
+</head>
+
+<body>
+
+    <h1>Calculadora</h1>
+
+    <form method="POST">
+
+        <input
+            type="number"
+            name="numero1"
+            placeholder="Primeiro número"
+            step="any"
+            required
+        >
+
+        <input
+            type="number"
+            name="numero2"
+            placeholder="Segundo número"
+            step="any"
+            required
+        >
+
+        <select name="operacao">
+
+            <option value="somar">Somar</option>
+            <option value="subtrair">Subtrair</option>
+            <option value="multiplicar">Multiplicar</option>
+            <option value="dividir">Dividir</option>
+
+        </select>
+
+        <button type="submit">
+            Calcular
+        </button>
+
+    </form>
+
+    {% if resultado is not none %}
+
+        <h2>Resultado: {{ resultado }}</h2>
+
+    {% endif %}
+
+</body>
+
+</html>
